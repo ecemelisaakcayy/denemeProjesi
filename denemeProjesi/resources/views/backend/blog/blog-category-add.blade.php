@@ -31,10 +31,12 @@
                             <div class="card-body">
                                 <div class="form-group">
                                     <label>Kategoriler</label>
-                                    <select class="form-control select2" style="width: 100%;">
-                                        <option selected="selected">Üst Kategori</option>
-                                        <option>Alaska</option>
-                                        <option>California</option>
+                                    <select class="form-control select2" style="width: 100%;" name="up_categoryId">
+                                        <option value="0" selected="selected">Üst Kategori</option>
+                                        @foreach($categories as $category)
+                                        <option value= "{{$category->id}}">{{$category->category_name}}</option>
+                                        @endforeach
+
                                     </select>
                                 </div>
 
@@ -44,8 +46,14 @@
                                 </div>
                             </div>
 
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Kategori Görünürlüğü</label><br>
+                                <input type="chechbox" name="category_status" data-bootstrap-switch>
+                            </div>
+
+
                             <div class="card-footer">
-                                <button type="submit" class="btn btn-primary">Kaydet</button>
+                                <button id="categoryButton" type="button" class="btn btn-primary">Kaydet</button>
                             </div>
                         </div>
                     </div>
@@ -59,8 +67,28 @@
 
 @section('js')
 
+<script src="/backend/plugins/select2/js/select2.full.min.js"></script>
+
+<script>
+    $(function () {
+        //Initialize Select2 Elements
+        $('.select2').select2()
+
+        //Initialize Select2 Elements
+        $('.select2bs4').select2({
+            theme: 'bootstrap4'
+        })
+
+        $("input[data-bootstrap-switch]").each(function(){
+            $(this).bootstrapSwitch('state', $(this).prop('checked'));
+        });
+    });
+</script>
 @endsection
 
 @section('css')
+
+<link rel="stylesheet" href="/backend/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+<link rel="stylesheet" href="/backend/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
 
 @endsection

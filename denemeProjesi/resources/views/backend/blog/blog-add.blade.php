@@ -109,7 +109,7 @@
 
 @section('js')
 
-<script src=/backend//backend/plugins/select2/js/select2.full.min.js"></script>
+<script src="/backend//backend/plugins/select2/js/select2.full.min.js"></script>
 <script src="/backend//backend/plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
 <script src="/backend//backend/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
 
