@@ -22,7 +22,7 @@ Route::prefix("admin")->group(function(){
 Route::get('/blogs','Blogs\BlogController@getBlogs')->name("blogs");
 Route::get('/blog-add','Blogs\BlogController@getBlogsAdd')->name("blog-add");
 Route::get('/blog-category','Blogs\BlogController@getBlogsCategory')->name("blog-category");
-Route::get('/blog-category-add','Blogs\BlogController@getBlogsAdd')->name("blog-category-add");
+Route::get('/blog-category-add','Blogs\BlogController@getBlogsCategoryAdd')->name("blog-category-add");
 Route::get('/blog-edit','Blogs\BlogController@getBlogsEdit')->name("blog-edit");
 Route::get('/blog-category-edit','Blogs\BlogController@getBlogsCategoryEdit')->name("blog-category-edit");
 

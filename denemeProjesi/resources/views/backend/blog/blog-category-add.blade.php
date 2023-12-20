@@ -33,9 +33,7 @@
                                     <label>Kategoriler</label>
                                     <select class="form-control select2" style="width: 100%;" name="up_categoryId">
                                         <option value="0" selected="selected">Üst Kategori</option>
-                                        @foreach($categories as $category)
-                                        <option value= "{{$category->id}}">{{$category->category_name}}</option>
-                                        @endforeach
+
 
                                     </select>
                                 </div>
