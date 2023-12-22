@@ -81,11 +81,57 @@
 
 @endsection
 
-
 @section('js')
+
+<script src="/backend//backend/plugins/select2/js/select2.full.min.js"></script>
+<script src="/backend//backend/plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+<script src="/backend//backend/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+
+<script>
+    $(function () {
+        //Initialize Select2 Elements
+        $('.select2').select2()
+
+        //Initialize Select2 Elements
+        $('.select2bs4').select2({
+            theme: 'bootstrap4'
+        })
+
+        $("input[data-bootstrap-switch]").each(function(){
+            $(this).bootstrapSwitch('state', $(this).prop('checked'));
+        });
+    });
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        bsCustomFileInput.init();
+    });
+</script>
+<script src="https://cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace('editor');
+</script>
+<script>
+    $("#coverImage").change(function () {
+        var input = this;
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $('#coverImageShow').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    });
+</script>
 
 @endsection
 
 @section('css')
+
+
+<link rel="stylesheet" href="/backend/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+ <link rel="stylesheet" href="/backend/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+
 
 @endsection

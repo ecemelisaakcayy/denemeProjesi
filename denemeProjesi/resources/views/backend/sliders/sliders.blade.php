@@ -12,7 +12,7 @@
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Anasayfa</a></li>
-                        <li class="breadcrumb-item active">Slider</li>dsadasdadsa
+                        <li class="breadcrumb-item active">Slider</li>
                     </ol>
                 </div>
             </div>

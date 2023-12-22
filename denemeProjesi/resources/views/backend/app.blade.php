@@ -123,13 +123,13 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="{{route('sliders')}}" class="nav-link">
+                                <a href="{{ route('slider-add') }}"class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Slider Ekle</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{route('slider-add')}}" class="nav-link">
+                                <a href="{{route('sliders')}}"  class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Sayfa Listesi</p>
                                 </a>
@@ -170,7 +170,7 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="{{route('user-add')}}" class="nav-link">
+                                <a href="{{route('user')}}" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Kullanıcı Ekle</p>
                                 </a>
