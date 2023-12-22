@@ -46,15 +46,15 @@
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                     data-accordion="false">
                     <li class="nav-item">
-                        <a href="{{route('index')}}" class="nav-link active">
+                        <a href="{{route('index')}}" class="nav-link {{request()->is('admin/home') ? 'active' :''}}">
                             <i class="nav-icon fas fa-tachometer-alt"></i>
                             <p>
                                 Anasayfa
                             </p>
                         </a>
                     </li>
-                    <li class="nav-item has-treeview">
-                        <a href="#" class="nav-link">
+                    <li class="nav-item has-treeview {{request()->is('admin/blogs','admin/blog-add','admin/blog-edit','admin/blog-category','admin/blog-category-add','adm,n/blog-category-edit') ? 'menu-open' :''}}">
+                        <a href="#" class="nav-link ">
                             <i class="nav-icon fab fa-blogger-b"></i>
                             <p>
                                 Bloglar
@@ -63,25 +63,25 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="{{route('blog-add')}}" class="nav-link">
+                                <a href="{{route('blog-add')}}" class="nav-link {{request()->is('admin/blogs') ? 'active' :''}}">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Blog Ekle</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{route('blogs')}}" class="nav-link">
+                                <a href="{{route('blogs')}}" class="nav-link {{request()->is('admin/blog-add') ? 'active' :''}}">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Blog Liste</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{route('blog-category')}}" class="nav-link">
+                                <a href="{{route('blog-category')}}" class="nav-link {{request()->is('admin/blog-category') ? 'active' :''}}">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Blog Kategori</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{route('blog-category-add')}}" class="nav-link">
+                                <a href="{{route('blog-category-add')}}" class="nav-link {{request()->is('admin/blog-category-edit') ? 'active' :''}}">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Blog Kategori Ekle</p>
                                 </a>
@@ -89,8 +89,8 @@
                         </ul>
                     </li>
 
-                    <li class="nav-item has-treeview">
-                        <a href="#" class="nav-link">
+                    <li class="nav-item has-treeview {{request()->is('admin/pages') ? 'active' :''}}">
+                        <a href="#" class="nav-link  ">
                             <i class="nav-icon fas fa-pager"></i>
                             <p>
                                 Sayfalar
@@ -99,13 +99,13 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="{{route('page-add')}}" class="nav-link">
+                                <a href="{{route('page-add')}}" class="nav-link {{request()->is('admin/page-add') ? 'active' :''}}">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Sayfa Ekle</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{route('pages')}}" class="nav-link">
+                                <a href="{{route('pages')}}" class="nav-link {{request()->is('admin/page-edit') ? 'active' :''}}">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Sayfa Listesi</p>
                                 </a>
@@ -113,7 +113,7 @@
                         </ul>
                     </li>
 
-                    <li class="nav-item has-treeview">
+                    <li class="nav-item has-treeview {{request()->is('admin/sliders') ? 'active' :''}}">
                         <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-images"></i>
                             <p>
@@ -123,13 +123,13 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="{{ route('slider-add') }}"class="nav-link">
+                                <a href="{{ route('slider-add') }}"class="nav-link {{request()->is('admin/slider-add') ? 'active' :''}}">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Slider Ekle</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{route('sliders')}}"  class="nav-link">
+                                <a href="{{route('sliders')}}"  class="nav-link {{request()->is('admin/slider-edit') ? 'active' :''}}">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Sayfa Listesi</p>
                                 </a>
@@ -137,7 +137,7 @@
                         </ul>
                     </li>
 
-                    <li class="nav-item has-treeview">
+                    <li class="nav-item has-treeview {{request()->is('admin/menus') ? 'active' :''}}">
                         <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-compass"></i>
                             <p>
@@ -147,20 +147,20 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="{{route('menu-add')}}" class="nav-link">
+                                <a href="{{route('menu-add')}}" class="nav-link {{request()->is('admin/menu-add') ? 'active' :''}}">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Menü Ekle</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{route('menus')}}" class="nav-link">
+                                <a href="{{route('menus')}}" class="nav-link {{request()->is('admin/menu-edit') ? 'active' :''}}">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Menü Listesi</p>
                                 </a>
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item has-treeview">
+                    <li class="nav-item has-treeview {{request()->is('admin/users') ? 'active' :''}}">
                         <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-users"></i>
                             <p>
@@ -170,13 +170,13 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="{{route('user')}}" class="nav-link">
+                                <a href="{{route('user')}}" class="nav-link {{request()->is('admin/user-add') ? 'active' :''}}">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Kullanıcı Ekle</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{route('user-add')}}" class="nav-link">
+                                <a href="{{route('user-add')}}" class="nav-link {{request()->is('admin/user-edit') ? 'active' :''}}">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Kullanıcı Listesi</p>
                                 </a>
