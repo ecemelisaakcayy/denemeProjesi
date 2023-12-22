@@ -64,10 +64,38 @@
 
 @endsection
 
-@section('js')
 
-@endsection
+<script>
+    $(function () {
 
-@section('css')
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
 
-@endsection
+        $('#sortable').sortable({
+            revert: true,
+            handle: ".sortable",
+            stop: function (event, ui) {
+                var data = $(this).sortable('serialize');
+                $.ajax({
+                    type: "POST",
+                    data: data,
+                    url: "/index.html",
+                    success: function (msg) {
+                        // console.log(msg);
+                        if (msg) {
+                            console.log("başarılı")
+                        } else {
+                            console.log("İşlem Başarısız");
+                        }
+                    }
+                });
+
+            }
+        });
+        $('#sortable').disableSelection();
+
+    });
+</script>

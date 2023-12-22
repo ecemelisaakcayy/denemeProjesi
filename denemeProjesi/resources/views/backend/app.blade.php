@@ -213,6 +213,7 @@
 <script src="/backend/plugins/jquery/jquery.min.js"></script>
 <script src="/backend/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="/backend/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
 <script src="/backend/dist/js/adminlte.js"></script>
 <script src="/backend/dist/js/demo.js"></script>
 <script src="/backend/plugins/jquery-mousewheel/jquery.mousewheel.js"></script>
